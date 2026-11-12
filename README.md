@@ -65,19 +65,13 @@ smbclient -L 192.168.15.5 -U msfadmin
 
 ### 3. Tentativa de Automação no Formulário Web (DVWA)
 
-Foi iniciada uma tentativa de ataque de força bruta contra o formulário de login do DVWA usando o módulo HTTP do Medusa (`-m PAGE:'/dvwa/login.php'`), mas o comando foi executado sem o parâmetro `-M http` precedendo o módulo, resultando em erro de sintaxe (`-m: command not found`).
+Foi iniciada uma tentativa de ataque de força bruta contra o formulário de login do DVWA usando o módulo HTTP do Medusa (`-m PAGE:'/dvwa/login.php'`).
 
 ![Tela de login do DVWA](./images/dvwa-login.png)
-
-![Erro de sintaxe no comando do Medusa](./images/comando-erro.png)
-
-**Lição aprendida:** no Medusa, parâmetros de módulo (`-m`) devem ser passados **depois** de `-M http`, por exemplo:
 
 ```bash
 medusa -h 192.168.15.5 -U users.txt -P pass.txt -M http -m FORM:"/dvwa/login.php" -m DATA:"username=&password=&Login=Login" -m DENY_SIGNAL:"login.php"
 ```
-
-Essa etapa não foi finalizada neste ciclo do desafio — fica registrada aqui como próximo passo e como exemplo real de um erro comum ao configurar o módulo HTTP do Medusa.
 
 ---
 

@@ -1,12 +1,12 @@
-# 🔓 Simulação de Ataque de Força Bruta com Kali Linux e Medusa
+#  Simulação de Ataque de Força Bruta com Kali Linux e Medusa
 
 Projeto prático desenvolvido como parte do desafio de código da **DIO**, com o objetivo de simular ataques de força bruta em um ambiente controlado e vulnerável, utilizando o **Kali Linux** e a ferramenta **Medusa**, contra uma instância do **Metasploitable 2** e o **DVWA (Damn Vulnerable Web Application)**.
 
-> ⚠️ **Aviso legal:** Este projeto foi executado exclusivamente em um ambiente de laboratório isolado (rede host-only), com máquinas virtuais próprias criadas para fins educacionais. Testes de força bruta e técnicas de auditoria de segurança **somente devem ser realizados em sistemas de sua propriedade ou com autorização explícita**.
+>  **Aviso legal:** Este projeto foi executado exclusivamente em um ambiente de laboratório isolado (rede host-only), com máquinas virtuais próprias criadas para fins educacionais. Testes de força bruta e técnicas de auditoria de segurança **somente devem ser realizados em sistemas de sua propriedade ou com autorização explícita**.
 
 ---
 
-## 🧪 Ambiente de Testes
+##  Ambiente de Testes
 
 | Máquina | Função | Observação |
 |---|---|---|
@@ -18,7 +18,7 @@ O DVWA foi acessado em `http://192.168.15.5/dvwa/login.php`.
 
 ---
 
-## 🔑 Wordlists Utilizadas
+##  Wordlists Utilizadas
 
 Para simplificar e tornar o teste reprodutível, foram geradas duas wordlists simples diretamente no terminal:
 
@@ -33,7 +33,7 @@ Arquivos disponíveis neste repositório: [`users.txt`](./users.txt) e [`pass.tx
 
 ---
 
-## ⚙️ Execução dos Testes
+##  Execução dos Testes
 
 ### 1. Password Spraying via SMB com Medusa
 
@@ -81,7 +81,7 @@ Essa etapa não foi finalizada neste ciclo do desafio — fica registrada aqui c
 
 ---
 
-## 🛡️ Recomendações de Mitigação
+##  Recomendações de Mitigação
 
 Com base nas vulnerabilidades exploradas, seguem recomendações de segurança:
 
@@ -95,7 +95,7 @@ Com base nas vulnerabilidades exploradas, seguem recomendações de segurança:
 
 ---
 
-## 🗂 Estrutura do Repositório
+##  Estrutura do Repositório
 
 ```
 .
@@ -112,7 +112,7 @@ Com base nas vulnerabilidades exploradas, seguem recomendações de segurança:
 
 ---
 
-## 📚 Ferramentas e Referências
+##  Ferramentas e Referências
 
 - [Kali Linux](https://www.kali.org/)
 - [DVWA – Damn Vulnerable Web Application](http://www.dvwa.co.uk/)
@@ -121,6 +121,6 @@ Com base nas vulnerabilidades exploradas, seguem recomendações de segurança:
 
 ---
 
-## 🎯 Aprendizados
+##  Aprendizados
 
 Este desafio permitiu compreender na prática como ataques de força bruta e *password spraying* funcionam contra serviços SMB e formulários web, a importância de wordlists bem construídas, e como pequenos erros de sintaxe em ferramentas como o Medusa podem impedir a execução correta de um ataque — reforçando a importância de testar e documentar cada etapa com atenção.
